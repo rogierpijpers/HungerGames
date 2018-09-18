@@ -85,6 +85,9 @@ public class ArenaController {
     }
 
     private Contestant getRandomContestant(){
+        if(contestants.size() == 1)
+            return contestants.stream().findFirst().get();
+
         Contestant contestant = null;
 
         while(contestant == null || !contestant.isAlive()){
