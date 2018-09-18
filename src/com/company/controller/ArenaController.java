@@ -26,10 +26,13 @@ public class ArenaController {
     }
 
     private void runDay() {
+        System.out.println("\n---- Two contestant encounter eachother");
         createEncounter();
 
+        System.out.println("\n---- Items are dropped");
         dropItems();
 
+        System.out.println("\n---- Time for bed");
         sleep();
     }
 
