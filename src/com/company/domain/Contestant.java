@@ -53,7 +53,13 @@ public abstract class Contestant {
     public void receiveDamage(int attack){
         int damage = attack - defenseInBattle;
         defenseInBattle -= attack;
+
+        if(defenseInBattle < 0)
+            defenseInBattle = 0;
+
         healthLevel = healthLevel - (damage > 0 ? damage : 0);
+
+        System.out.println("Contestant " + playerId + " health: " + healthLevel + " defense: " + defenseInBattle);
 
         if(healthLevel <= 0){
             isAlive = false;
