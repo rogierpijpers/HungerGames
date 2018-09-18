@@ -5,16 +5,23 @@ import java.util.Random;
 public abstract class Contestant {
     private static final int DEFAULT_HEALTH = 100;
 
+    public int getPlayerId() {
+        return playerId;
+    }
+
+    private int playerId;
     private int attackLevel;
     private int defenseLevel;
     private int healthLevel;
     private BattleItem battleItem;
     private boolean isAlive;
 
-    public Contestant(){
+    public Contestant(int playerId){
+        this.playerId = playerId;
         attackLevel = 0;
         defenseLevel = 0;
         this.healthLevel = DEFAULT_HEALTH;
+        this.isAlive = true;
     }
 
     /*
@@ -25,23 +32,24 @@ public abstract class Contestant {
         Random r = new Random();
         int percentage = r.nextInt(100);
 
-        if(percentage >= 20){
+        if(percentage <= 20){
             System.out.println("Miss! 0 damage");
             return;
         }
 
         int damage = getAttackLevel();
-        if(percentage >= 30){
+        if(percentage <= 30){
             damage = (int) Math.round(damage * 1.05);
             System.out.println("Crit!");
         }
 
-        System.out.println("Dealt " + damage + " damage");
+        System.out.println("Player " + playerId + " Dealt " + damage + " damage to player " + enemy.getPlayerId());
         enemy.receiveDamage(damage);
     }
 
     public void receiveDamage(int damage){
-        healthLevel = healthLevel - damage;
+        damage = damage - defenseLevel;
+        healthLevel = healthLevel - (damage > 0 ? damage : 0);
 
         if(healthLevel <= 0)
             isAlive = false;
@@ -68,7 +76,7 @@ public abstract class Contestant {
     }
 
     public int getDefenseLevel() {
-        return defenseLevel;
+        return battleItem == null ? defenseLevel : defenseLevel + battleItem.getDefenseLevel();
     }
 
     public void setDefenseLevel(int defenseLevel) {
@@ -81,7 +89,7 @@ public abstract class Contestant {
 
     @Override
     public String toString(){
-        return "Health: " + getHealthLevel() +" Attack: " + getAttackLevel() + " Defense: " + getDefenseLevel() + " Item: " + battleItem;
+        return "ID: " + playerId + " Health: " + getHealthLevel() +" Attack: " + getAttackLevel() + " Defense: " + getDefenseLevel() + " Item: " + battleItem;
     }
 
     public boolean isAlive() {

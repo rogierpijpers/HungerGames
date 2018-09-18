@@ -45,9 +45,9 @@ public class ContestantController {
 
             // one quarter of contestants is career
             if(i < (CONTESTANT_COUNT / 4))
-                contestant = createCareerContestant();
+                contestant = createCareerContestant(i);
             else
-                contestant = createDistrictContestant();
+                contestant = createDistrictContestant(i);
 
             contestants.add(contestant);
         }
@@ -55,21 +55,25 @@ public class ContestantController {
         return contestants;
     }
 
-    private BattleItem createBattleItem(){
-        int attackLevel = RandomGenerator.getRandomNumber(DEFAULT_MIN_ITEM, DEFAULT_MAX_ITEM);
-        BattleItem battleItem = new BattleItem(attackLevel);
+    public BattleItem createBattleItem(){
+        Random random = new Random();
+        boolean attackItem = random.nextBoolean();
+
+        int itemLevel = RandomGenerator.getRandomNumber(DEFAULT_MIN_ITEM, DEFAULT_MAX_ITEM);
+
+        BattleItem battleItem = attackItem ? new BattleItem(itemLevel, 0) : new BattleItem(0, itemLevel);
         return battleItem;
     }
 
-    private Contestant createDistrictContestant(){
-        Contestant contestant = new DistrictContestant();
+    private Contestant createDistrictContestant(int id){
+        Contestant contestant = new DistrictContestant(id);
         fillRandomStats(contestant);
         return contestant;
     }
 
-    private Contestant createCareerContestant(){
+    private Contestant createCareerContestant(int id){
         BattleItem battleItem = createBattleItem();
-        Contestant contestant = new CareerContestant(battleItem);
+        Contestant contestant = new CareerContestant(id, battleItem);
         fillRandomStats(contestant);
         return contestant;
     }
