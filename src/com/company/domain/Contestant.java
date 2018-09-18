@@ -36,17 +36,17 @@ public abstract class Contestant {
         int percentage = r.nextInt(100);
 
         if(percentage <= 20){
-            System.out.println("Miss! 0 damage");
+            System.out.println("Miss! - Contestant " + playerId + " Dealt 0 damage to contestant " + enemy.getPlayerId());
             return;
         }
 
         int damage = getAttackLevel();
         if(percentage <= 30){
             damage = (int) Math.round(damage * 1.05);
-            System.out.println("Crit!");
+            System.out.print("Crit! - ");
         }
 
-        System.out.println("Player " + playerId + " Dealt " + damage + " damage to player " + enemy.getPlayerId());
+        System.out.println("Contestant " + playerId + " Dealt " + damage + " damage to contestant " + enemy.getPlayerId());
         enemy.receiveDamage(damage);
     }
 
@@ -55,8 +55,10 @@ public abstract class Contestant {
         defenseInBattle -= attack;
         healthLevel = healthLevel - (damage > 0 ? damage : 0);
 
-        if(healthLevel <= 0)
+        if(healthLevel <= 0){
             isAlive = false;
+            System.out.println("Contestant " + playerId + " died!");
+        }
     }
 
     public void resetDefense(){
