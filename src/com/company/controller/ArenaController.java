@@ -58,11 +58,18 @@ public class ArenaController {
         Contestant fighter1 = getRandomContestant();
         Contestant fighter2 = getRandomContestant();
 
+        int noRounds = 0;
         while(fighter1.isAlive() && fighter2.isAlive()){
             fighter1.attack(fighter2);
 
             if(fighter2.isAlive())
                 fighter2.attack(fighter1);
+
+            noRounds++;
+            if(noRounds > 4){
+                System.out.println("No player could win, they both fled the scene");
+                break;
+            }
         }
 
         if(!fighter1.isAlive())
