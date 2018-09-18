@@ -1,5 +1,6 @@
 package com.company.controller;
 
+import com.company.domain.BattleItem;
 import com.company.domain.Contestant;
 import com.company.util.RandomGenerator;
 
@@ -21,10 +22,10 @@ public class ArenaController {
         System.out.println("End of game. Winner: " + contestants.stream().filter(x -> x.isAlive()).findFirst().get());
     }
 
-    private void runDay(){
+    private void runDay() {
         createEncounter();
 
-        // find weapons (take if better than current)
+        dropItems();
 
         sleep();
     }
@@ -36,6 +37,21 @@ public class ArenaController {
                 noAliveContestants++;
 
         return noAliveContestants > 1;
+    }
+
+    private void dropItems(){
+        // drop three items each day
+        for(int i = 0; i < 3; i++){
+            BattleItem item = contestantController.createBattleItem();
+            Contestant luckyFinder = getRandomContestant();
+
+            System.out.println("Contestant " + luckyFinder.getPlayerId() + " found item " + item);
+
+            if(!luckyFinder.hasBetterItem(item))
+                luckyFinder.setBattleItem(item);
+            else
+                System.out.println("Contestant leaves item and keeps current: " + luckyFinder.getBattleItem());
+        }
     }
 
     private void createEncounter(){

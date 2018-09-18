@@ -55,6 +55,16 @@ public abstract class Contestant {
             isAlive = false;
     }
 
+    public boolean hasBetterItem(BattleItem foundItem){
+        if(battleItem == null)
+            return false;
+
+        int currentLevel = battleItem.getAttackLevel() > 0 ? battleItem.getAttackLevel() : battleItem.getDefenseLevel();
+        int newLevel = foundItem.getAttackLevel() > 0 ? foundItem.getAttackLevel() : foundItem.getDefenseLevel();
+
+        return currentLevel >= newLevel;
+    }
+
     public void resetHealth(){
         this.healthLevel = DEFAULT_HEALTH;
     }

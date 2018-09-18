@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57aab767-5b0f-44ed-a23e-db314bae1eb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HungerGames/com/company/controller/ContestantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HungerGames/com/company/controller/ContestantController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/CareerContestant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/CareerContestant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/Contestant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/Contestant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/DistrictContestant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HungerGames/com/company/domain/DistrictContestant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/controller/ContestantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/controller/ContestantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/domain/BattleItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/domain/BattleItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/domain/CareerContestant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/domain/CareerContestant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/controller/ArenaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/controller/ArenaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/domain/Contestant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/domain/Contestant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/domain/DistrictContestant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/domain/DistrictContestant.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,23 +32,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4859" />
+          <entry key="java" value="5387" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4859" />
+          <entry key="JAVA" value="5387" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/controller/ArenaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="357">
+              <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/domain/BattleItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="100">
               <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
               <folding>
                 <element signature="e#96#97#0" expanded="true" />
@@ -86,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/domain/Contestant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
+            <state relative-caret-position="323">
+              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
               <folding>
                 <element signature="e#171#172#0" expanded="true" />
                 <element signature="e#202#203#0" expanded="true" />
@@ -118,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/controller/ContestantController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
+            <state relative-caret-position="270">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,14 +142,14 @@
         <option value="$PROJECT_DIR$/src/com/company/controller/AreaController.java" />
         <option value="$PROJECT_DIR$/src/com/company/NotEnoughPlayersException.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/controller/ArenaController.java" />
         <option value="$PROJECT_DIR$/src/com/company/domain/CareerContestant.java" />
         <option value="$PROJECT_DIR$/src/com/company/domain/DistrictContestant.java" />
         <option value="$PROJECT_DIR$/src/com/company/domain/AttackItem.java" />
         <option value="$PROJECT_DIR$/src/com/company/domain/DefenseItem.java" />
         <option value="$PROJECT_DIR$/src/com/company/domain/BattleItem.java" />
-        <option value="$PROJECT_DIR$/src/com/company/domain/Contestant.java" />
         <option value="$PROJECT_DIR$/src/com/company/controller/ContestantController.java" />
+        <option value="$PROJECT_DIR$/src/com/company/domain/Contestant.java" />
+        <option value="$PROJECT_DIR$/src/com/company/controller/ArenaController.java" />
       </list>
     </option>
   </component>
@@ -221,7 +213,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537261657090" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537262217975" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -274,7 +266,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18724832" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18724832" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
@@ -282,7 +274,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -329,16 +321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/controller/ArenaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/domain/AttackItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -354,38 +336,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/domain/BattleItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding>
-            <element signature="e#96#97#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/domain/Contestant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="39" lean-forward="true" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1490#1491#0" expanded="true" />
-            <element signature="e#1589#1590#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -405,8 +355,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/controller/ContestantController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="63" column="103" selection-start-line="63" selection-start-column="103" selection-end-line="63" selection-end-column="103" />
+        <state relative-caret-position="270">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/domain/Contestant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/domain/BattleItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding>
+            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#298#299#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/controller/ArenaController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="52" column="46" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
