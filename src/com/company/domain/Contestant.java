@@ -30,6 +30,8 @@ public abstract class Contestant {
     /*
     10% chance to crit -> 5% extra damage
     20% chance to miss (fighting is hard in real life) -> 0 damage
+
+    in battle defense decreases with each hit. Defense stat is reset after battle
     */
     public void attack(Contestant enemy){
         Random r = new Random();
