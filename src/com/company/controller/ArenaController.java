@@ -13,6 +13,9 @@ public class ArenaController {
     public ArenaController(){
         contestantController = new ContestantController();
         contestants = contestantController.createContestants();
+
+        for(Contestant contestant : contestants)
+            System.out.println(contestant);
     }
 
     public void run() {
@@ -56,7 +59,7 @@ public class ArenaController {
 
     private void createEncounter(){
         Contestant fighter1 = getRandomContestant();
-        Contestant fighter2 = getRandomContestant();
+        Contestant fighter2 = getRandomContestant(fighter1);
 
         int noRounds = 0;
         while(fighter1.isAlive() && fighter2.isAlive()){
@@ -71,6 +74,9 @@ public class ArenaController {
                 break;
             }
         }
+
+        fighter1.resetDefense();
+        fighter2.resetDefense();
 
         if(!fighter1.isAlive())
             contestants.remove(fighter1);
@@ -87,6 +93,14 @@ public class ArenaController {
         }
 
         return contestant;
+    }
+
+    private Contestant getRandomContestant(Contestant exclude) {
+        while(true){
+            Contestant contestant = getRandomContestant();
+            if(contestant != exclude)
+                return contestant;
+        }
     }
 
     public void sleep(){

@@ -16,12 +16,15 @@ public abstract class Contestant {
     private BattleItem battleItem;
     private boolean isAlive;
 
+    private int defenseInBattle;
+
     public Contestant(int playerId){
         this.playerId = playerId;
         attackLevel = 0;
         defenseLevel = 0;
         this.healthLevel = DEFAULT_HEALTH;
         this.isAlive = true;
+        this.defenseInBattle = defenseLevel;
     }
 
     /*
@@ -47,12 +50,17 @@ public abstract class Contestant {
         enemy.receiveDamage(damage);
     }
 
-    public void receiveDamage(int damage){
-        damage = damage - defenseLevel;
+    public void receiveDamage(int attack){
+        int damage = attack - defenseInBattle;
+        defenseInBattle -= attack;
         healthLevel = healthLevel - (damage > 0 ? damage : 0);
 
         if(healthLevel <= 0)
             isAlive = false;
+    }
+
+    public void resetDefense(){
+        this.defenseInBattle = defenseLevel;
     }
 
     public boolean hasBetterItem(BattleItem foundItem){
