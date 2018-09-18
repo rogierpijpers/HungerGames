@@ -67,9 +67,8 @@ public class ArenaController {
     }
 
     public void sleep(){
-        int defaultHealth = ContestantController.getDefaultHealth();
         for(Contestant contestant : contestants)
             if(contestant.isAlive())
-                contestant.setHealthLevel(defaultHealth);
+                contestant.resetHealth();
     }
 }

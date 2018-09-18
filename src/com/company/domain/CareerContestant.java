@@ -3,8 +3,8 @@ package com.company.domain;
 public class CareerContestant extends Contestant {
     private static final int BONUS_ATTACK = 10;
 
-    public CareerContestant(int healthLevel, BattleItem battleItem){
-        super(healthLevel);
+    public CareerContestant(BattleItem battleItem){
+        super();
         this.setBattleItem(battleItem);
     }
 

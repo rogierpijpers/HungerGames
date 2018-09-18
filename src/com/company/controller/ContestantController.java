@@ -37,12 +37,6 @@ public class ContestantController {
         return DEFAULT_MAX_ITEM;
     }
 
-    public static int getDefaultHealth() {
-        return DEFAULT_HEALTH;
-    }
-
-    private static final int DEFAULT_HEALTH = 100;
-
     public List<Contestant> createContestants(){
         List<Contestant> contestants = new ArrayList<>();
 
@@ -68,14 +62,14 @@ public class ContestantController {
     }
 
     private Contestant createDistrictContestant(){
-        Contestant contestant = new DistrictContestant(DEFAULT_HEALTH);
+        Contestant contestant = new DistrictContestant();
         fillRandomStats(contestant);
         return contestant;
     }
 
     private Contestant createCareerContestant(){
         BattleItem battleItem = createBattleItem();
-        Contestant contestant = new CareerContestant(DEFAULT_HEALTH, battleItem);
+        Contestant contestant = new CareerContestant(battleItem);
         fillRandomStats(contestant);
         return contestant;
     }

@@ -1,31 +1,54 @@
 package com.company.domain;
 
+import java.util.Random;
+
 public abstract class Contestant {
+    private static final int DEFAULT_HEALTH = 100;
+
     private int attackLevel;
     private int defenseLevel;
     private int healthLevel;
     private BattleItem battleItem;
     private boolean isAlive;
 
-    public Contestant(int healthLevel){
+    public Contestant(){
         attackLevel = 0;
         defenseLevel = 0;
-        this.healthLevel = healthLevel;
+        this.healthLevel = DEFAULT_HEALTH;
     }
 
     /*
-        10% chance to crit -> 5% extra damage
-        20% chance to miss (fighting is hard in real life) -> 0 damage
-     */
+    10% chance to crit -> 5% extra damage
+    20% chance to miss (fighting is hard in real life) -> 0 damage
+    */
     public void attack(Contestant enemy){
-        //
+        Random r = new Random();
+        int percentage = r.nextInt(100);
+
+        if(percentage >= 20){
+            System.out.println("Miss! 0 damage");
+            return;
+        }
+
+        int damage = getAttackLevel();
+        if(percentage >= 30){
+            damage = (int) Math.round(damage * 1.05);
+            System.out.println("Crit!");
+        }
+
+        System.out.println("Dealt " + damage + " damage");
+        enemy.receiveDamage(damage);
     }
 
-    public void receiveDamager(int damage){
+    public void receiveDamage(int damage){
         healthLevel = healthLevel - damage;
 
         if(healthLevel <= 0)
             isAlive = false;
+    }
+
+    public void resetHealth(){
+        this.healthLevel = DEFAULT_HEALTH;
     }
 
     public BattleItem getBattleItem() {
